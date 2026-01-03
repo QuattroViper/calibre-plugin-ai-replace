@@ -9,4 +9,4 @@ class AiReplacerPlugin(InterfaceActionBase):
     version = (0, 3, 0)
     minimum_calibre_version = (6, 0, 0)
 
-    actual_plugin = 'calibre_plugins.ai_replace.main:AiReplaceAction'
+    actual_plugin = 'main:AiReplaceAction'
