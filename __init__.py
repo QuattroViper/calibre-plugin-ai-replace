@@ -1,7 +1,12 @@
-from .action import AIReplaceAction as InterfaceAction
+from calibre.customize import InterfaceActionBase
 
-# Basic metadata (used by some tooling; Calibre discovers the action class above)
-PLUGIN_NAME = 'AI Replace'
-PLUGIN_VERSION = (0, 1, 0)
-AUTHOR = 'Your Name'
-DESCRIPTION = 'A minimal Calibre plugin that adds a single menu item.'
+
+class AiReplacerPlugin(InterfaceActionBase):
+    name = 'AI Context Replacer'
+    description = 'Minimally removes or change exclamations while preserving formatting'
+    supported_platforms = ['windows', 'osx', 'linux']
+    author = 'Marno van Niekerk'
+    version = (0, 3, 0)
+    minimum_calibre_version = (6, 0, 0)
+
+    actual_plugin = 'calibre_plugins.ai_replace.main:AiReplaceAction'
